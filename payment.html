@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Payment Method</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+<a href="index.html" class="me-2"><i class="bi bi-house-door-fill text-dark fs-3"></i></a> 
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <!-- Payment Card -->
+      <div class="card shadow-lg border-0 rounded-4">
+        <div class="card-body p-4">
+
+          <h3 class="text-center mb-4 fw-bold text-success">Select Payment Method</h3>
+
+          <!-- Accordion -->
+          <div class="accordion" id="paymentMethods">
+
+            <!-- Debit / Credit Card -->
+            <div class="accordion-item mb-2 border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingCard">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#cardPayment">
+                  <i class="bi bi-credit-card-fill text-primary me-2"></i> Credit / Debit Card
+                </button>
+              </h2>
+              <div id="cardPayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Card Number</label>
+                      <input type="text" class="form-control" placeholder="1234 5678 9012 3456">
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Expiry Date</label>
+                        <input type="text" class="form-control" placeholder="MM/YY">
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">CVV</label>
+                        <input type="password" class="form-control" placeholder="***">
+                      </div>
+                    </div>
+                    <button class="btn btn-success w-100">Proceed to Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- UPI -->
+            <div class="accordion-item mb-2 border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingUPI">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#upiPayment">
+                  <i class="bi bi-upc-scan text-success me-2"></i> UPI
+                </button>
+              </h2>
+              <div id="upiPayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">UPI ID</label>
+                      <input type="text" class="form-control" placeholder="example@upi">
+                    </div>
+                    <button class="btn btn-success w-100">Proceed to Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- PhonePe -->
+            <div class="accordion-item mb-2 border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingPhonePe">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#phonepePayment">
+                  <i class="bi bi-phone-fill text-info me-2"></i> PhonePe
+                </button>
+              </h2>
+              <div id="phonepePayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">PhonePe Mobile Number</label>
+                      <input type="text" class="form-control" placeholder="Enter registered number">
+                    </div>
+                    <button class="btn btn-success w-100">Proceed to Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Paytm -->
+            <div class="accordion-item mb-2 border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingPaytm">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#paytmPayment">
+                  <i class="bi bi-wallet2 text-warning me-2"></i> Paytm Wallet
+                </button>
+              </h2>
+              <div id="paytmPayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Paytm Mobile Number</label>
+                      <input type="text" class="form-control" placeholder="Enter registered number">
+                    </div>
+                    <button class="btn btn-success w-100">Proceed to Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Net Banking -->
+            <div class="accordion-item mb-2 border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingNetbanking">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#netbankingPayment">
+                  <i class="bi bi-bank text-danger me-2"></i> Net Banking
+                </button>
+              </h2>
+              <div id="netbankingPayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label">Select Bank</label>
+                      <select class="form-select">
+                        <option>SBI</option>
+                        <option>HDFC</option>
+                        <option>ICICI</option>
+                        <option>Axis</option>
+                        <option>Kotak</option>
+                      </select>
+                    </div>
+                    <button class="btn btn-success w-100">Proceed to Pay</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cash on Delivery -->
+            <div class="accordion-item border-0 shadow-sm rounded-3">
+              <h2 class="accordion-header" id="headingCOD">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#codPayment">
+                  <i class="bi bi-cash-stack text-dark me-2"></i> Cash on Delivery
+                </button>
+              </h2>
+              <div id="codPayment" class="accordion-collapse collapse" data-bs-parent="#paymentMethods">
+                <div class="accordion-body text-center">
+                  <p class="mb-3">You can pay in cash when your order is delivered.</p>
+                  <button class="btn btn-success w-100">Confirm Order</button>
+                </div>
+              </div>
+            </div>
+          </div>     <!-- End Accordion -->
+        </div>
+      </div>      <!-- End Card -->
+    </div>
+  </div>
+</div>
+</body>
+</html>

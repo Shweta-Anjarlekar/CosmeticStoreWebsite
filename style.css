@@ -1,0 +1,38 @@
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      color: black; /* Black shade  */
+      padding: 10px 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: white; /* nav link hover */
+      background-color: black;
+    }
+
+    .navbar-brand img {
+      height: 50px; /* IMG logo size */
+    }
+
+    .search-box {
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 5px 10px;
+      width: 250px;
+    }
+
+    .login-card {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgb(70, 69, 69);
+      background: #fff;
+    }
+    
+    .form-control {
+      border-radius: 10px;
+    }
+
+    a[href="index.html"]{
+          position:fixed;
+    }
